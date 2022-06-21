@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { getMovies } from './services/fetch-utils';
 import MoviesList from './MoviesList';
+import PostsList from './PostsList';
+
 
 import './App.css';
 // import your arrays here
@@ -8,22 +10,25 @@ import './App.css';
 function App() {
 
   const [movies, setMovies] = useState([]);
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     async function fetchMoviesData() {
-      const data = await getMovies();
+      const movies = await getMovies();
 
-      setMovies(data);
+      setMovies(movies);
     }
     fetchMoviesData();
   }, []);
 
   return (
     <div className="App">
+      <h2>Posts List</h2>
+      <PostsList posts={posts} />
+      <hr />
+
       <h2>Movies List</h2>
       <MoviesList movies={movies}/>
-      <hr />
-      
     </div>
   );
 }
