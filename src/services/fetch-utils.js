@@ -6,3 +6,10 @@ export async function getMovies() {
 
   return response.data;
 }
+
+export async function getPosts() {
+  const response = await client.from('Posts')
+    .select('*');
+
+  return response.data;
+}

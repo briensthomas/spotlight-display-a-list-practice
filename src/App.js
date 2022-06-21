@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getMovies } from './services/fetch-utils';
+import { getMovies, getPosts } from './services/fetch-utils';
 import MoviesList from './MoviesList';
 import PostsList from './PostsList';
 
@@ -12,13 +12,20 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    async function fetchMoviesData() {
-      const movies = await getMovies();
+  async function fetchMoviesData() {
+    const movies = await getMovies();
 
-      setMovies(movies);
-    }
+    setMovies(movies);
+  }
+
+  async function fetchPosts() {
+    const posts = await getPosts();
+    setPosts(posts);
+  }
+
+  useEffect(() => {
     fetchMoviesData();
+    fetchPosts();
   }, []);
 
   return (
