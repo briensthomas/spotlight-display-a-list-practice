@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getMovies, getPosts } from './services/fetch-utils';
+import { getMovies, getPosts, getTacos } from './services/fetch-utils';
 import MoviesList from './MoviesList';
 import PostsList from './PostsList';
 
