@@ -36,3 +36,63 @@
     transform: rotate(360deg);
   }
 }
+
+.posts-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.shop-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.shop {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.movies-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.books-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px;
+}
