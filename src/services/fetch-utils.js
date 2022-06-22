@@ -14,6 +14,13 @@ export async function getPosts() {
   return response.data;
 }
 
+export async function getBooks() {
+  const response = await client.from('Books')
+    .select('*');
+
+  return response.data;
+}
+
 export async function getTacos() {
   const response = await client2.from('Shop_info')
     .select('*');
